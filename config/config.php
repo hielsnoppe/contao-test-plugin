@@ -19,8 +19,6 @@ $GLOBALS['TL_EVENTS']['dc-general.factory.build-data-definition'][] = array(
 );
 */
 
-exit('I broke the system!');
-
 $GLOBALS['BE_MOD']['content']['newsletter']['send'] = array('Nl2Go\Plugins\Contao\Newsletter', 'send');
 $GLOBALS['BE_MOD']['content']['newsletter']['import'] = array('Nl2Go\Plugins\Contao\Newsletter', 'importRecipients');
 
