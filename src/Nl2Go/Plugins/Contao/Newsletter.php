@@ -2,16 +2,9 @@
 
 namespace Nl2Go\Plugins\Contao;
 
-use Composer\Plugin\PluginInterface;
-
 use \Contao\Backend;
 use \Contao\Newsletter as ContaoNewsletter;
 use \Contao\NewsletterRecipientsModel;
-
-class Plugin implements PluginInterface {
-
-    NewsletterRecipientsModel
-}
 
 class Newsletter extends ContaoNewsletter {
 

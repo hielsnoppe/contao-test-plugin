@@ -10,17 +10,23 @@
  * Hooks
  */
 
+/*
 $GLOBALS['TL_HOOKS']['loadDataContainer'][] = array('Bit3\Contao\MetaPalettes\MetaPalettes', 'generatePalettes');
 
 $GLOBALS['TL_EVENTS']['dc-general.factory.build-data-definition'][] = array(
     'Bit3\Contao\MetaPalettes\MetaPalettesBuilder::process',
     200
 );
+*/
+
+$GLOBALS['BE_MOD']['content']['newsletter']['send'] = array('Nl2Go\Plugins\Contao\Newsletter', 'send');
+$GLOBALS['BE_MOD']['content']['newsletter']['import'] = array('Nl2Go\Plugins\Contao\Newsletter', 'importRecipients');
 
 /**
  * Backwards compatibility
  */
 
+/*
 spl_autoload_register (function ($class) {
 
     if ('MetaPalettes' === $class) {
@@ -32,3 +38,4 @@ spl_autoload_register (function ($class) {
 
     return false;
 });
+*/
