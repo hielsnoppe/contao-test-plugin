@@ -1,0 +1,47 @@
+{
+    "name": "newsletter2go/newsletter2go",
+    "description": "Newsletter2Go integration for Contao",
+    "keywords": [
+        "contao",
+        "newsletter"
+    ],
+    "type":"contao-module",
+    "homepage": "http://www.newsletter2go.com/",
+    "license": "All rights reserved",
+    "authors": [
+        {
+            "name": "Niels Hoppe",
+            "email": "hoppe@newsletter2go.com",
+            "homepage": "http://www.nielshoppe.de",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "info@contao-community-alliance.de",
+        "issues": "https://github.com/contao-community-alliance/translator/issues",
+        "irc": "irc://irc.freenode.org/contao.cca",
+        "source": "https://github.com/contao-community-alliance/translator"
+    },
+    "require": {
+        "php": ">=5.3",
+        "contao/core": ">=3.2,<3.6-dev",
+        "contao-community-alliance/composer-plugin": "~2.0",
+        "contao-community-alliance/event-dispatcher": "~1.0"
+    },
+    "require-dev": {
+        "phpcq/all-tasks": "~1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Nl2Go\\Plugins\\Contao": "src"
+        }
+    },
+    "extra": {
+        "contao": {
+            "sources": {
+                "contao": "system/modules/newsletter2go"
+            }
+        }
+    },
+    "minimum-stability": "dev"
+}
