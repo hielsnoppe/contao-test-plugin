@@ -17,10 +17,9 @@
         }
     ],
     "support": {
-        "email": "info@contao-community-alliance.de",
-        "issues": "https://github.com/contao-community-alliance/translator/issues",
-        "irc": "irc://irc.freenode.org/contao.cca",
-        "source": "https://github.com/contao-community-alliance/translator"
+        "email": "hoppe@newsletter2go.com",
+        "issues": "https://github.com/hielsnoppe/contao-test-plugin/issues",
+        "source": "https://github.com/hielsnoppe/contao-test-plugin"
     },
     "require": {
         "php": ">=5.3",
