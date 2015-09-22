@@ -1,41 +1,49 @@
 <?php
 
 /**
- * @copyright  Newsletter2Go GmbH 2015
- * @author     Niels Hoppe <hoppe@newsletter2go.com>
- * @package    Newsletter2Go
+ * news_categories extension for Contao Open Source CMS
+ *
+ * Copyright (C) 2011-2014 Codefog
+ *
+ * @package news_categories
+ * @author  Webcontext <http://webcontext.com>
+ * @author  Codefog <info@codefog.pl>
+ * @author  Kamil Kuzminski <kamil.kuzminski@codefog.pl>
+ * @license LGPL
  */
+
+/**
+ * Extension version
+ */
+@define('NEWS_CATEGORIES_VERSION', '2.6');
+@define('NEWS_CATEGORIES_BUILD', '1');
+
+/**
+ * Back end modules
+ */
+$GLOBALS['BE_MOD']['content']['news']['tables'][] = 'tl_news_category';
+
+/**
+ * Front end modules
+ */
+$GLOBALS['FE_MOD']['news']['newscategories'] = 'ModuleNewsCategories';
+
+/**
+ * Content elements
+ */
+$GLOBALS['TL_CTE']['includes']['newsfilter'] = 'ContentNewsFilter';
 
 /**
  * Hooks
  */
+$GLOBALS['TL_HOOKS']['parseArticles'][] = array('News', 'addCategoriesToTemplate');
 
-/*
-$GLOBALS['TL_HOOKS']['loadDataContainer'][] = array('Bit3\Contao\MetaPalettes\MetaPalettes', 'generatePalettes');
-
-$GLOBALS['TL_EVENTS']['dc-general.factory.build-data-definition'][] = array(
-    'Bit3\Contao\MetaPalettes\MetaPalettesBuilder::process',
-    200
-);
-*/
-
-$GLOBALS['BE_MOD']['content']['newsletter']['send'] = array('Nl2Go\Plugins\Contao\Newsletter', 'send');
-$GLOBALS['BE_MOD']['content']['newsletter']['import'] = array('Nl2Go\Plugins\Contao\Newsletter', 'importRecipients');
+if (in_array('changelanguage', \ModuleLoader::getActive())) {
+    $GLOBALS['TL_HOOKS']['translateUrlParameters'][] = array('NewsCategories', 'translateUrlParameters');
+}
 
 /**
- * Backwards compatibility
+ * Add permissions
  */
-
-/*
-spl_autoload_register (function ($class) {
-
-    if ('MetaPalettes' === $class) {
-
-        //class_alias('Bit3\Contao\MetaPalettes\MetaPalettes', 'MetaPalettes');
-
-        return true;
-    }
-
-    return false;
-});
-*/
+$GLOBALS['TL_PERMISSIONS'][] = 'newscategories';
+$GLOBALS['TL_PERMISSIONS'][] = 'newscategories_default';
