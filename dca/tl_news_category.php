@@ -1,11 +1,11 @@
 <?php
 
 /**
- * news_categories extension for Contao Open Source CMS
+ * newsletter2go extension for Contao Open Source CMS
  *
  * Copyright (C) 2011-2014 Codefog
  *
- * @package news_categories
+ * @package newsletter2go
  * @author  Webcontext <http://webcontext.com>
  * @author  Codefog <info@codefog.pl>
  * @author  Kamil Kuzminski <kamil.kuzminski@codefog.pl>
@@ -51,7 +51,7 @@ $GLOBALS['TL_DCA']['tl_news_category'] = array
         'sorting' => array
         (
             'mode'                    => 5,
-            'icon'                    => 'system/modules/news_categories/assets/icon.png',
+            'icon'                    => 'system/modules/newsletter2go/assets/icon.png',
             'paste_button_callback'   => array('tl_news_category', 'pasteCategory'),
             'panelLayout'             => 'search'
         ),

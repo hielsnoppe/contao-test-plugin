@@ -1,11 +1,11 @@
 <?php
 
 /**
- * news_categories extension for Contao Open Source CMS
+ * newsletter2go extension for Contao Open Source CMS
  *
  * Copyright (C) 2011-2014 Codefog
  *
- * @package news_categories
+ * @package newsletter2go
  * @link    http://codefog.pl
  * @author  Webcontext <http://webcontext.com>
  * @author  Codefog <info@codefog.pl>

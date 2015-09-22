@@ -1,11 +1,11 @@
 <?php
 
 /**
- * news_categories extension for Contao Open Source CMS
+ * newsletter2go extension for Contao Open Source CMS
  *
  * Copyright (C) 2011-2014 Codefog
  *
- * @package news_categories
+ * @package newsletter2go
  * @link    http://codefog.pl
  * @author  Webcontext <http://webcontext.com>
  * @author  Codefog <info@codefog.pl>
@@ -73,7 +73,7 @@ class ModuleNewsCategories extends \ModuleNews
     protected function compile()
     {
         $strClass = \NewsCategories\NewsCategories::getModelClass();
-        $objCategories = $strClass::findPublishedByParent($this->news_archives, ($this->news_customCategories ? deserialize($this->news_categories) : null));
+        $objCategories = $strClass::findPublishedByParent($this->news_archives, ($this->news_customCategories ? deserialize($this->newsletter2go) : null));
 
         // Return if no categories are found
         if ($objCategories === null) {
@@ -117,8 +117,8 @@ class ModuleNewsCategories extends \ModuleNews
         $rootId = 0;
 
         // Set the custom root ID
-        if ($this->news_categoriesRoot) {
-            $rootId = $this->news_categoriesRoot;
+        if ($this->newsletter2goRoot) {
+            $rootId = $this->newsletter2goRoot;
         }
 
         $this->Template->categories = $this->renderNewsCategories($rootId, array_unique($arrIds), $strUrl);

@@ -1,5 +1,5 @@
 {
-    "name": "hielsnoppe/contao-test-plugin",
+    "name": "hielsnoppe/newsletter2go",
     "description": "Newsletter2Go extension for Contao Open Source CMS",
     "keywords": ["contao", "newsletter"],
     "type": "contao-module",
@@ -21,7 +21,7 @@
     "extra": {
         "contao": {
             "sources": {
-                "": "system/modules/contao-test-plugin"
+                "": "system/modules/newsletter2go"
             }
         }
     }

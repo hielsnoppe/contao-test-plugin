@@ -1,11 +1,11 @@
 <?php
 
 /**
- * news_categories extension for Contao Open Source CMS
+ * newsletter2go extension for Contao Open Source CMS
  *
  * Copyright (C) 2011-2014 Codefog
  *
- * @package news_categories
+ * @package newsletter2go
  * @link    http://codefog.pl
  * @author  Webcontext <http://webcontext.com>
  * @author  Codefog <info@codefog.pl>
@@ -43,7 +43,7 @@ class NewsCategoryMultilingualModel extends \MultilingualModel
 
         $time = time();
         $t = static::$strTable;
-        $arrColumns = array("$t.id IN (SELECT category_id FROM tl_news_categories WHERE news_id IN (SELECT id FROM tl_news WHERE pid IN (" . implode(',', array_map('intval', $arrArchives)) . ")" . (!BE_USER_LOGGED_IN ? " AND (tl_news.start='' OR tl_news.start<$time) AND (tl_news.stop='' OR tl_news.stop>$time) AND tl_news.published=1" : "") . "))");
+        $arrColumns = array("$t.id IN (SELECT category_id FROM tl_newsletter2go WHERE news_id IN (SELECT id FROM tl_news WHERE pid IN (" . implode(',', array_map('intval', $arrArchives)) . ")" . (!BE_USER_LOGGED_IN ? " AND (tl_news.start='' OR tl_news.start<$time) AND (tl_news.stop='' OR tl_news.stop>$time) AND tl_news.published=1" : "") . "))");
 
         // Filter by custom categories
         if (is_array($arrIds) && !empty($arrIds)) {

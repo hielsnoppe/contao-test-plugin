@@ -1,11 +1,11 @@
 <?php
 
 /**
- * news_categories extension for Contao Open Source CMS
+ * newsletter2go extension for Contao Open Source CMS
  *
  * Copyright (C) 2011-2014 Codefog
  *
- * @package news_categories
+ * @package newsletter2go
  * @author  Webcontext <http://webcontext.com>
  * @author  Codefog <info@codefog.pl>
  * @author  Kamil Kuzminski <kamil.kuzminski@codefog.pl>
@@ -15,9 +15,9 @@
 /**
  * Register the global save and delete callbacks
  */
-$GLOBALS['TL_DCA']['tl_news']['config']['onload_callback'][] = array('tl_news_categories', 'setAllowedCategories');
-$GLOBALS['TL_DCA']['tl_news']['config']['onsubmit_callback'][] = array('tl_news_categories', 'updateCategories');
-$GLOBALS['TL_DCA']['tl_news']['config']['ondelete_callback'][] = array('tl_news_categories', 'deleteCategories');
+$GLOBALS['TL_DCA']['tl_news']['config']['onload_callback'][] = array('tl_newsletter2go', 'setAllowedCategories');
+$GLOBALS['TL_DCA']['tl_news']['config']['onsubmit_callback'][] = array('tl_newsletter2go', 'updateCategories');
+$GLOBALS['TL_DCA']['tl_news']['config']['ondelete_callback'][] = array('tl_newsletter2go', 'deleteCategories');
 
 /**
  * Extend a tl_news palette
@@ -38,7 +38,7 @@ $GLOBALS['TL_DCA']['tl_news']['fields']['categories'] = array
     'sql'                     => "blob NULL"
 );
 
-class tl_news_categories extends Backend
+class tl_newsletter2go extends Backend
 {
 
     /**
@@ -92,7 +92,7 @@ class tl_news_categories extends Backend
 
         if (is_array($arrCategories) && !empty($arrCategories)) {
             foreach ($arrCategories as $intCategory) {
-                $this->Database->prepare("INSERT INTO tl_news_categories (category_id, news_id) VALUES (?, ?)")
+                $this->Database->prepare("INSERT INTO tl_newsletter2go (category_id, news_id) VALUES (?, ?)")
                                ->execute($intCategory, $dc->id);
             }
 
@@ -107,7 +107,7 @@ class tl_news_categories extends Backend
      */
     public function deleteCategories(DataContainer $dc)
     {
-        $this->Database->prepare("DELETE FROM tl_news_categories WHERE news_id=?")
+        $this->Database->prepare("DELETE FROM tl_newsletter2go WHERE news_id=?")
                        ->execute($dc->id);
     }
 }

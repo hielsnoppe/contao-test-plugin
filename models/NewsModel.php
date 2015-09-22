@@ -1,11 +1,11 @@
 <?php
 
 /**
- * news_categories extension for Contao Open Source CMS
+ * newsletter2go extension for Contao Open Source CMS
  *
  * Copyright (C) 2011-2014 Codefog
  *
- * @package news_categories
+ * @package newsletter2go
  * @link    http://codefog.pl
  * @author  Webcontext <http://webcontext.com>
  * @author  Codefog <info@codefog.pl>
@@ -31,7 +31,7 @@ class NewsModel extends \Contao\NewsModel
 
         if (!is_array($arrCache)) {
             $arrCache = array();
-            $objCategories = \Database::getInstance()->execute("SELECT * FROM tl_news_categories");
+            $objCategories = \Database::getInstance()->execute("SELECT * FROM tl_newsletter2go");
             $arrCategories = array();
 
             while ($objCategories->next()) {

@@ -1,4 +1,4 @@
-news_categories Changelog
+newsletter2go Changelog
 =========================
 
 Version 2.6.1 stable (2015-06-24)

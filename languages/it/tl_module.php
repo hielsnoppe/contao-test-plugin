@@ -1,11 +1,11 @@
 <?php
 
 /**
- * news_categories extension for Contao Open Source CMS
+ * newsletter2go extension for Contao Open Source CMS
  *
  * Copyright (C) 2011-2014 Codefog
  *
- * @package news_categories
+ * @package newsletter2go
  * @link    http://codefog.pl
  * @author  Webcontext <http://webcontext.com>
  * @author  Codefog <info@codefog.pl>
@@ -18,7 +18,7 @@
  * Fields
  */
 
-$GLOBALS['TL_LANG']['tl_module']['news_categories']       = array('Categorie news', 'Scegli le categorie di news.');
+$GLOBALS['TL_LANG']['tl_module']['newsletter2go']       = array('Categorie news', 'Scegli le categorie di news.');
 $GLOBALS['TL_LANG']['tl_module']['news_customCategories'] = array('Categorie personalizzate', 'Mostra solo le categorie scelte.');
 $GLOBALS['TL_LANG']['tl_module']['news_filterCategories'] = array('Filtra per categorie', 'Filtra questa lista con il modulo Categorie News.');
 $GLOBALS['TL_LANG']['tl_module']['news_filterDefault']    = array('Filtro predefinito', 'Puoi scegliere con quali categorie filtrare la lista di news.');

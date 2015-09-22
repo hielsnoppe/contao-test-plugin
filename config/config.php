@@ -5,7 +5,7 @@
  *
  * Copyright (C) 2015-2015 Newsletter2Go GmbH
  *
- * @package contao-test-plugin
+ * @package newsletter2go
  * @author  Niels Hoppe <hoppe@newsletter2go.com>
  * @license All rights reserved
  */

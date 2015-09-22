@@ -1,11 +1,11 @@
 <?php
 
 /**
- * news_categories extension for Contao Open Source CMS
+ * newsletter2go extension for Contao Open Source CMS
  *
  * Copyright (C) 2011-2014 Codefog
  *
- * @package news_categories
+ * @package newsletter2go
  * @author  Webcontext <http://webcontext.com>
  * @author  Codefog <info@codefog.pl>
  * @author  Kamil Kuzminski <kamil.kuzminski@codefog.pl>
@@ -16,8 +16,8 @@
  * Add palettes to tl_module
  */
 $GLOBALS['TL_DCA']['tl_module']['palettes']['__selector__'][] = 'news_customCategories';
-$GLOBALS['TL_DCA']['tl_module']['palettes']['newscategories'] = '{title_legend},name,headline,type;{config_legend},news_archives,news_resetCategories,news_showQuantity,news_categoriesRoot,news_customCategories;{redirect_legend:hide},jumpTo;{template_legend:hide},navigationTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
-$GLOBALS['TL_DCA']['tl_module']['subpalettes']['news_customCategories'] = 'news_categories';
+$GLOBALS['TL_DCA']['tl_module']['palettes']['newscategories'] = '{title_legend},name,headline,type;{config_legend},news_archives,news_resetCategories,news_showQuantity,newsletter2goRoot,news_customCategories;{redirect_legend:hide},jumpTo;{template_legend:hide},navigationTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_module']['subpalettes']['news_customCategories'] = 'newsletter2go';
 
 /**
  * Extend tl_module palettes
@@ -29,9 +29,9 @@ $GLOBALS['TL_DCA']['tl_module']['palettes']['newsmenu'] = str_replace('news_arch
 /**
  * Add new fields to tl_module
  */
-$GLOBALS['TL_DCA']['tl_module']['fields']['news_categories'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['newsletter2go'] = array
 (
-    'label'                   => &$GLOBALS['TL_LANG']['tl_module']['news_categories'],
+    'label'                   => &$GLOBALS['TL_LANG']['tl_module']['newsletter2go'],
     'exclude'                 => true,
     'inputType'               => 'treePicker',
     'foreignKey'              => 'tl_news_category.title',
@@ -93,9 +93,9 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['news_resetCategories'] = array
     'sql'                     => "char(1) NOT NULL default ''"
 );
 
-$GLOBALS['TL_DCA']['tl_module']['fields']['news_categoriesRoot'] = array
+$GLOBALS['TL_DCA']['tl_module']['fields']['newsletter2goRoot'] = array
 (
-    'label'                   => &$GLOBALS['TL_LANG']['tl_module']['news_categoriesRoot'],
+    'label'                   => &$GLOBALS['TL_LANG']['tl_module']['newsletter2goRoot'],
     'exclude'                 => true,
     'inputType'               => 'treePicker',
     'foreignKey'              => 'tl_news_category.title',
