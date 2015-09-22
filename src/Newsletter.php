@@ -25,7 +25,8 @@ class Newsletter extends ContaoNewsletter {
 
     public function importRecipients () {
 
-        exit('I broke importRecipients');
+        echo('I broke importRecipients');
+        exit();
     }
 
     public function removeSubscriptions ($intUser, $strMode) {
