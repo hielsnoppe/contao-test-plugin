@@ -23,7 +23,7 @@
     },
     "require": {
         "php": ">=5.3",
-        "contao/core": ">=3.2,<3.6-dev",
+        "contao/core": ">=3.2,<3.6-dev"
     },
     "require-dev": {
         "phpcq/all-tasks": "~1.0"
